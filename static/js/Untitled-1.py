@@ -16,7 +16,7 @@ CrearFile.write("Bienbenidos")
 def main():
     mqttc=mqtt.Client()
     mqttc.on_message=on_message
-    mqttc.username_pw_set("paoolo_9419@hotmail.com","@ndrespaucar")
+    mqttc.username_pw_set("paoolo_9419@hotmail.com","@ndrespaolo")
     mqttc.connect("maqiatto.com",1883)
     mqttc.subscribe("paoolo_9419@hotmail.com/IoT1",0)
     FechaActual=" "
