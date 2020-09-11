@@ -15,9 +15,9 @@ GPIO.setmode(GPIO.BCM)
 def main():
     mqttc=mqtt.Client()
     mqttc.on_message=on_message
-    mqttc.username_pw_set("jomsk@hotmail.com","Jomsk4all1996")
+    mqttc.username_pw_set("paoolo_9419@hotmail.com","@ndrespaolo")
     mqttc.connect("maqiatto.com",1883)
-    mqttc.subscribe("jomsk@hotmail.com/IoT1",0)
+    mqttc.subscribe("paoolo_9419@hotmail.com/IoT1",0)
     FechaActual=" "
     GPIO.setup(b2,GPIO.IN)
     GPIO.setup(l2,GPIO.OUT)
@@ -33,9 +33,9 @@ def main():
         if(GPIO.input(b2)==0):
             CrearFile.write("Se Ha pulsado 2")
             GPIO.output(l2,1)
-            mqttc.publish("jomsk@hotmail.com/IoT","L;H")
+            mqttc.publish("paoolo_9419@hotmail.com/IoT","L;H")
             time.sleep(0.5)
-            mqttc.publish("jomsk@hotmail.com/IoT","L;L")
+            mqttc.publish("paoolo_9419@hotmail.com/IoT","L;L")
             GPIO.output(l2,0)
             CrearFile.close()
             
@@ -45,9 +45,9 @@ def main():
             CrearFile.write(FechaActual+" Se Ha pulsado 1 \n")
             
             GPIO.output(l1,1)
-            mqttc.publish("jomsk@hotmail.com/IoT","H;L")
+            mqttc.publish("paoolo_9419@hotmail.com/IoT","H;L")
             time.sleep(0.5)
-            mqttc.publish("jomsk@hotmail.com/IoT","L;L")
+            mqttc.publish("paoolo_9419@hotmail.com/IoT","L;L")
             GPIO.output(l1,0)
             CrearFile.close()
 
