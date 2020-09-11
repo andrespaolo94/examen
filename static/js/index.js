@@ -8,8 +8,8 @@
   client.onMessageArrived = onMessageArrived;
   var options = {
     useSSL: false,
-    userName: "jomsk@hotmail.com",
-    password: "Jomsk4all1996",
+    userName: "paoolo_9419@hotmail.com",
+    password: "@ndrespaolo",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -21,7 +21,7 @@
   function onConnect() {
     // Once a connection has been made, make a subscription and send a message.
     console.log("Bienbebido a RIP");
-    client.subscribe("jomsk@hotmail.com/IoT");
+    client.subscribe("paoolo_9419@hotmail.com/IoT");
   
   }
 
